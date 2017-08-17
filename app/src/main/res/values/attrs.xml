@@ -5,4 +5,10 @@
         <attr name="label_color" format="color"/>
         <attr name="circle_label" format="string"/>
     </declare-styleable>
+
+
+    <declare-styleable name="ShapeSelectorView">
+        <attr name="shpaeColor" format="color"/>
+        <attr name="displayShpaeName" format="boolean"/>
+    </declare-styleable>
 </resources>

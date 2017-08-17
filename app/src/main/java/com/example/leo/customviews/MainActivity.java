@@ -6,12 +6,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
 
     Button btnPress;
-    LovelyView lovelyView;
+    ShapeSelectorView shapeSelectorView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,16 +21,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         btnPress = (Button) findViewById(R.id.btn_press);
-        lovelyView = (LovelyView) findViewById(R.id.lovely_view);
-
-
+        shapeSelectorView = (ShapeSelectorView) findViewById(R.id.shape_view);
 
         btnPress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                lovelyView.setCircleColor(Color.BLUE);
-                lovelyView.setLabelText("PRESSED");
+                Toast.makeText(MainActivity.this,shapeSelectorView.getSelectedShapeName(),Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 }

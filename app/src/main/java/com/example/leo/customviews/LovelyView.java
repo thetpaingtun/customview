@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.annotation.ColorRes;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -124,7 +125,7 @@ public class LovelyView extends View {
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
 
-            setCircleColor(Color.BLUE);
+            setCircleColor(ContextCompat.getColor(getContext(),R.color.colorPrimaryDark));
 
             return true;
         }

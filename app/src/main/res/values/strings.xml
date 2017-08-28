@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">CustomViews</string>
+
+
+    <string name="btn_submit_text">Submit</string>
+
+
+    <string-array name="planets_name">
+        <item>Pluto</item>
+        <item>Earth</item>
+        <item>Mars</item>
+    </string-array>
+
+    <plurals name="book_count">
+        <item quantity="one">%d Book found.</item>
+        <item quantity="other">%d Books found.</item>
+    </plurals>
+
+    <string name="welcome_msg">Hi %1$s! You have %2$d new messages</string>
+
+    <string name="msg">Hello <b>Thet Paing Tun </b></string>
 </resources>

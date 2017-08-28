@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    xmlns:custom="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.leo.customviews.MainActivity">
 
 
@@ -12,8 +12,7 @@
         android:id="@+id/btn_press"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="press"
-        />
+        android:text="press" />
 
 
     <com.example.leo.customviews.ShapeSelectorView
@@ -21,15 +20,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         custom:displayShpaeName="true"
-        custom:shpaeColor="@color/colorAccent"
-        />
+        custom:shpaeColor="@color/colorAccent" />
 
     <ImageView
         android:id="@+id/img_drawable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/scale" />
+
+    <TextView
+        android:id="@+id/book_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:text="0 books found."
+        android:text="@string/msg"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_submit_text"
+       />
+
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter something"
         />
 
 

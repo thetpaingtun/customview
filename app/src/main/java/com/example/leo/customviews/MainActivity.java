@@ -1,11 +1,14 @@
 package com.example.leo.customviews;
 
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnPress;
     ShapeSelectorView shapeSelectorView;
+
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnPress = (Button) findViewById(R.id.btn_press);
         shapeSelectorView = (ShapeSelectorView) findViewById(R.id.shape_view);
+        imageView = (ImageView) findViewById(R.id.img_drawable);
 
         btnPress.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +35,18 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,shapeSelectorView.getSelectedShapeName(),Toast.LENGTH_SHORT).show();
             }
         });
+
+        Drawable drawable = ContextCompat.getDrawable(this,R.mipmap.ic_launcher);
+
+        Util.showLog("Height : "+drawable.getIntrinsicHeight());
+
+
+       drawable.setAlpha(40);
+
+
+        imageView.setImageDrawable(drawable);
+
+
 
     }
 }

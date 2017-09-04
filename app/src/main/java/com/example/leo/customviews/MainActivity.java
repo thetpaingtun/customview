@@ -1,5 +1,6 @@
 package com.example.leo.customviews;
 
+import android.animation.ObjectAnimator;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     ShapeSelectorView shapeSelectorView;
 
     ImageView imageView;
+    ImageView imgHeart;
 
     EditText editText;
 
@@ -53,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         shapeSelectorView = (ShapeSelectorView) findViewById(R.id.shape_view);
         imageView = (ImageView) findViewById(R.id.img_drawable);
 
-        editText = (EditText) findViewById(R.id.edit_text);
+        imgHeart = (ImageView) findViewById(R.id.heart_ic);
 
         bookMsg = (TextView) findViewById(R.id.book_msg);
 
@@ -74,9 +76,20 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 bookMsg.setText(spannable);
+
+
+
             }
         });
 
 
+
+
+        imgHeart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"Clicked",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

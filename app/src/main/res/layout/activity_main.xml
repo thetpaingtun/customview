@@ -8,11 +8,15 @@
     tools:context="com.example.leo.customviews.MainActivity">
 
 
+
+
+
     <Button
         android:id="@+id/btn_press"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="press" />
+        android:text="press"
+        />
 
 
     <com.example.leo.customviews.ShapeSelectorView
@@ -41,17 +45,24 @@
 
 
     <Button
-        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="@string/btn_submit_text"
+        android:textSize="24sp"
+
+        />
+
+
+
+    <ImageView
+        android:id="@+id/heart_ic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_submit_text" />
-
-
-    <EditText
-        android:id="@+id/edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enter something"
+        android:src="@drawable/ic_favorite_black_48dp"
+        android:tint="@color/colorPrimary"
+        android:clickable="true"
+        android:layout_gravity="center"
+        android:background="?selectableItemBackgroundBorderless"
         />
 
 

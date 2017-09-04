@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -8,17 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
 
         <item name="colorControlHighlight">@color/colorAccent</item>
+
+
+        <item name="android:statusBarColor">@color/colorAccent</item>
+
     </style>
-
-
-    <style name="LoginTheme" parent="AppTheme">
-        <item name="android:windowBackground">@drawable/login_background</item>
-    </style>
-
-
-    <style name="mystyle" parent="TextAppearance.AppCompat">
-        <item name="android:textSize">50sp</item>
-        <item name="android:color">@color/colorAccent</item>
-    </style>
-
 </resources>

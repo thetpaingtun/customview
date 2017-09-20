@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.CycleInterpolator;
 import android.widget.ImageView;
 
 public class AnimationActivity extends AppCompatActivity {
@@ -23,17 +24,22 @@ public class AnimationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_animation);
 
 
-
         imgBell = (ImageView) findViewById(R.id.ic_bell);
     }
 
     public void animate(final View view) {
 
 
-        Animation animation = AnimationUtils.loadAnimation(this,R.anim.shake);
-        imgBell.startAnimation(animation);
+        ValueAnimator animator = ValueAnimator.ofFloat(1,0);
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                imgBell.setAlpha((float)animation.getAnimatedValue());
+            }
+        });
 
 
 
+        animator.start();
     }
 }

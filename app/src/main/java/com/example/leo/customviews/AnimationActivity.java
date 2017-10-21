@@ -35,6 +35,8 @@ public class AnimationActivity extends AppCompatActivity {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 imgBell.setAlpha((float)animation.getAnimatedValue());
+
+
             }
         });
 

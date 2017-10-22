@@ -9,15 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".DrawableActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
         <activity
             android:name=".LoginDrawable"
-            android:theme="@style/LoginTheme"></activity>
+            android:theme="@style/LoginTheme" />
         <activity android:name=".AnimationActivity">
+        </activity>
+        <activity android:name=".ProgressActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

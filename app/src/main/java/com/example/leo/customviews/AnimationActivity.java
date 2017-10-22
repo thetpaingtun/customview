@@ -17,6 +17,7 @@ import android.widget.ImageView;
 public class AnimationActivity extends AppCompatActivity {
 
     ImageView imgBell;
+    private float mDensity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,23 +26,34 @@ public class AnimationActivity extends AppCompatActivity {
 
 
         imgBell = (ImageView) findViewById(R.id.ic_bell);
+
+        mDensity = getResources().getDisplayMetrics().density;
     }
 
     public void animate(final View view) {
 
+//
+//        ValueAnimator animator = ValueAnimator.ofFloat(1,0);
+//        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+//            @Override
+//            public void onAnimationUpdate(ValueAnimator animation) {
+//                imgBell.setAlpha((float)animation.getAnimatedValue());
+//
+//
+//            }
+//        });
+//
+//
+//
+//        animator.start();
 
-        ValueAnimator animator = ValueAnimator.ofFloat(1,0);
-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                imgBell.setAlpha((float)animation.getAnimatedValue());
+//        ObjectAnimator.ofFloat(imgBell,"x",300.0f).start();
 
 
-            }
-        });
-
-
-
+        Animator animator = AnimatorInflater.loadAnimator(this,R.animator.rotate);
+        animator.setTarget(imgBell);
         animator.start();
+
+
     }
 }

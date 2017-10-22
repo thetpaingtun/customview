@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="LovelyView">
-        <attr name="circle_color" format="color"/>
-        <attr name="label_color" format="color"/>
-        <attr name="circle_label" format="string"/>
+        <attr name="circle_color" format="color" />
+        <attr name="label_color" format="color" />
+        <attr name="circle_label" format="string" />
     </declare-styleable>
 
 
     <declare-styleable name="ShapeSelectorView">
-        <attr name="shpaeColor" format="color"/>
-        <attr name="displayShpaeName" format="boolean"/>
+        <attr name="shpaeColor" format="color" />
+        <attr name="displayShpaeName" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="GoalProgressBar">
+        <attr name="goalIndicatorHeight" format="dimension" />
+        <attr name="goalIndicatorWidth" format="dimension" />
+        <attr name="barHeight" format="dimension" />
+        <attr name="goalReachedColor" format="color" />
+        <attr name="goalNotReachedColor" format="color" />
+        <attr name="unfilledSectionColor" format="color" />
     </declare-styleable>
 </resources>

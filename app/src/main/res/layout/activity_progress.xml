@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.leo.customviews.ProgressActivity"
+    android:padding="30dp"
+    >
+
+
+    <com.example.leo.customviews.view.GoalProgressBar
+        android:id="@+id/goal_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:goalIndicatorHeight="24dp"
+        app:goalIndicatorWidth="4dp"
+        app:goalReachedColor="@color/colorPrimary"
+        app:goalNotReachedColor="@android:color/background_dark"
+        app:unfilledSectionColor="@android:color/darker_gray"
+        />
+
+
+    <Button
+        android:id="@+id/btn_set_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Progress"
+        android:layout_below="@id/goal_progress"
+        android:layout_marginTop="20dp"
+        />
+
+</RelativeLayout>
